@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+<h1> Listado</h1>
+
+<h:dataTable value="#{inscripcion.listado}" var="inscripcion">
+	<h:column>
+		<f:facet name="header">Cedula</f:facet>
+		#{cursos.inscripcion.cedula_alumno}
+	</h:column>
+		<h:column>
+		<f:facet name="header">Nombre</f:facet>
+		#{cursos.inscripcion.nombre_alumno}
+	</h:column>
+		<h:column>
+		<f:facet name="header">Apellido</f:facet>
+		#{inscripcion.apellido_alumno}
+	</h:column>
+		<h:column>
+		<f:facet name="header">Curso</f:facet>
+		#{inscripcion.nCurso}
+	</h:column>
+
+
+</h:dataTable>
+
+<h:form>
+    <h:commandButton value="Regresar" action="#{cursos.back}" />
+</h:form>
+    
+
+</body> 
+</html>
